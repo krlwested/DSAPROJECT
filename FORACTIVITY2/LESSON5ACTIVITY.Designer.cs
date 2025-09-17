@@ -36,7 +36,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtbox_Employeenumber = new System.Windows.Forms.TextBox();
+            this.txtbox_employeenumber = new System.Windows.Forms.TextBox();
             this.txtbox_department = new System.Windows.Forms.TextBox();
             this.txtbox_basicincomerateperhour = new System.Windows.Forms.TextBox();
             this.txtbox_basicincomenumberofhours = new System.Windows.Forms.TextBox();
@@ -74,7 +74,6 @@
             this.txtbox_surname = new System.Windows.Forms.TextBox();
             this.txtbox_civilstatus = new System.Windows.Forms.TextBox();
             this.txtbox_qualifieddependentstatus = new System.Windows.Forms.TextBox();
-            this.txtbox_paydate = new System.Windows.Forms.TextBox();
             this.txtbox_employeestatus = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
@@ -89,25 +88,27 @@
             this.label38 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.datetimepickerpaydate = new System.Windows.Forms.DateTimePicker();
             this.txtbox_designation = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtbox_ssscontribution = new System.Windows.Forms.TextBox();
-            this.txtbox_philhealthcontribution = new System.Windows.Forms.TextBox();
-            this.txtbox_pagibigcontribution = new System.Windows.Forms.TextBox();
-            this.txtbox_incometaxcontribution = new System.Windows.Forms.TextBox();
-            this.txtbox_sssloans = new System.Windows.Forms.TextBox();
-            this.txtbox_pagibigloan = new System.Windows.Forms.TextBox();
-            this.txtbox_facultysavingsdeposit = new System.Windows.Forms.TextBox();
-            this.txtbox_facultysavingsloan = new System.Windows.Forms.TextBox();
-            this.txtbox_salaryloan = new System.Windows.Forms.TextBox();
-            this.txtbox_otherloans = new System.Windows.Forms.TextBox();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
+            this.txtbox_totaldeductions = new System.Windows.Forms.TextBox();
+            this.btn_new = new System.Windows.Forms.Button();
+            this.btn_update = new System.Windows.Forms.Button();
+            this.btn_save = new System.Windows.Forms.Button();
+            this.btn_netincome = new System.Windows.Forms.Button();
             this.btn_grossincome = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.txtbox_otherloans = new System.Windows.Forms.TextBox();
+            this.txtbox_salaryloan = new System.Windows.Forms.TextBox();
+            this.txtbox_facultysavingsloan = new System.Windows.Forms.TextBox();
+            this.txtbox_facultysavingsdeposit = new System.Windows.Forms.TextBox();
+            this.txtbox_pagibigloan = new System.Windows.Forms.TextBox();
+            this.txtbox_sssloans = new System.Windows.Forms.TextBox();
+            this.txtbox_incometaxcontribution = new System.Windows.Forms.TextBox();
+            this.txtbox_pagibigcontribution = new System.Windows.Forms.TextBox();
+            this.txtbox_philhealthcontribution = new System.Windows.Forms.TextBox();
+            this.txtbox_ssscontribution = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -187,16 +188,16 @@
             this.label7.TabIndex = 7;
             this.label7.Text = "No. of Hours / Cut Off:";
             // 
-            // txtbox_Employeenumber
+            // txtbox_employeenumber
             // 
-            this.txtbox_Employeenumber.Location = new System.Drawing.Point(129, 162);
-            this.txtbox_Employeenumber.Name = "txtbox_Employeenumber";
-            this.txtbox_Employeenumber.Size = new System.Drawing.Size(147, 20);
-            this.txtbox_Employeenumber.TabIndex = 8;
+            this.txtbox_employeenumber.Location = new System.Drawing.Point(136, 161);
+            this.txtbox_employeenumber.Name = "txtbox_employeenumber";
+            this.txtbox_employeenumber.Size = new System.Drawing.Size(147, 20);
+            this.txtbox_employeenumber.TabIndex = 8;
             // 
             // txtbox_department
             // 
-            this.txtbox_department.Location = new System.Drawing.Point(129, 188);
+            this.txtbox_department.Location = new System.Drawing.Point(136, 189);
             this.txtbox_department.Name = "txtbox_department";
             this.txtbox_department.Size = new System.Drawing.Size(147, 20);
             this.txtbox_department.TabIndex = 9;
@@ -496,13 +497,6 @@
             this.txtbox_qualifieddependentstatus.Size = new System.Drawing.Size(147, 20);
             this.txtbox_qualifieddependentstatus.TabIndex = 45;
             // 
-            // txtbox_paydate
-            // 
-            this.txtbox_paydate.Location = new System.Drawing.Point(604, 145);
-            this.txtbox_paydate.Name = "txtbox_paydate";
-            this.txtbox_paydate.Size = new System.Drawing.Size(147, 20);
-            this.txtbox_paydate.TabIndex = 46;
-            // 
             // txtbox_employeestatus
             // 
             this.txtbox_employeestatus.Location = new System.Drawing.Point(604, 171);
@@ -622,9 +616,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.datetimepickerpaydate);
             this.groupBox1.Controls.Add(this.txtbox_designation);
             this.groupBox1.Controls.Add(this.txtbox_employeestatus);
-            this.groupBox1.Controls.Add(this.txtbox_paydate);
             this.groupBox1.Controls.Add(this.txtbox_qualifieddependentstatus);
             this.groupBox1.Controls.Add(this.txtbox_civilstatus);
             this.groupBox1.Controls.Add(this.txtbox_surname);
@@ -639,7 +633,7 @@
             this.groupBox1.Controls.Add(this.label21);
             this.groupBox1.Controls.Add(this.label20);
             this.groupBox1.Controls.Add(this.txtbox_department);
-            this.groupBox1.Controls.Add(this.txtbox_Employeenumber);
+            this.groupBox1.Controls.Add(this.txtbox_employeenumber);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.pictureBox1);
@@ -652,6 +646,15 @@
             this.groupBox1.Text = "groupBox1";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // datetimepickerpaydate
+            // 
+            this.datetimepickerpaydate.CalendarFont = new System.Drawing.Font("Microsoft Uighur", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datetimepickerpaydate.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datetimepickerpaydate.Location = new System.Drawing.Point(578, 147);
+            this.datetimepickerpaydate.Name = "datetimepickerpaydate";
+            this.datetimepickerpaydate.Size = new System.Drawing.Size(173, 20);
+            this.datetimepickerpaydate.TabIndex = 49;
+            // 
             // txtbox_designation
             // 
             this.txtbox_designation.Location = new System.Drawing.Point(604, 194);
@@ -661,10 +664,11 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button5);
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.txtbox_totaldeductions);
+            this.groupBox2.Controls.Add(this.btn_new);
+            this.groupBox2.Controls.Add(this.btn_update);
+            this.groupBox2.Controls.Add(this.btn_save);
+            this.groupBox2.Controls.Add(this.btn_netincome);
             this.groupBox2.Controls.Add(this.btn_grossincome);
             this.groupBox2.Controls.Add(this.label41);
             this.groupBox2.Controls.Add(this.label40);
@@ -723,75 +727,70 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
             // 
-            // txtbox_ssscontribution
+            // txtbox_totaldeductions
             // 
-            this.txtbox_ssscontribution.Location = new System.Drawing.Point(604, 37);
-            this.txtbox_ssscontribution.Name = "txtbox_ssscontribution";
-            this.txtbox_ssscontribution.Size = new System.Drawing.Size(147, 20);
-            this.txtbox_ssscontribution.TabIndex = 49;
+            this.txtbox_totaldeductions.Location = new System.Drawing.Point(604, 333);
+            this.txtbox_totaldeductions.Name = "txtbox_totaldeductions";
+            this.txtbox_totaldeductions.Size = new System.Drawing.Size(147, 20);
+            this.txtbox_totaldeductions.TabIndex = 77;
             // 
-            // txtbox_philhealthcontribution
+            // btn_new
             // 
-            this.txtbox_philhealthcontribution.Location = new System.Drawing.Point(604, 61);
-            this.txtbox_philhealthcontribution.Name = "txtbox_philhealthcontribution";
-            this.txtbox_philhealthcontribution.Size = new System.Drawing.Size(147, 20);
-            this.txtbox_philhealthcontribution.TabIndex = 61;
+            this.btn_new.Location = new System.Drawing.Point(760, 367);
+            this.btn_new.Name = "btn_new";
+            this.btn_new.Size = new System.Drawing.Size(62, 22);
+            this.btn_new.TabIndex = 76;
+            this.btn_new.Text = "NEW";
+            this.btn_new.UseVisualStyleBackColor = true;
+            this.btn_new.Click += new System.EventHandler(this.btn_new_Click);
             // 
-            // txtbox_pagibigcontribution
+            // btn_update
             // 
-            this.txtbox_pagibigcontribution.Location = new System.Drawing.Point(604, 86);
-            this.txtbox_pagibigcontribution.Name = "txtbox_pagibigcontribution";
-            this.txtbox_pagibigcontribution.Size = new System.Drawing.Size(147, 20);
-            this.txtbox_pagibigcontribution.TabIndex = 62;
+            this.btn_update.Location = new System.Drawing.Point(694, 367);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(62, 22);
+            this.btn_update.TabIndex = 75;
+            this.btn_update.Text = "UPDATE";
+            this.btn_update.UseVisualStyleBackColor = true;
             // 
-            // txtbox_incometaxcontribution
+            // btn_save
             // 
-            this.txtbox_incometaxcontribution.Location = new System.Drawing.Point(604, 111);
-            this.txtbox_incometaxcontribution.Name = "txtbox_incometaxcontribution";
-            this.txtbox_incometaxcontribution.Size = new System.Drawing.Size(147, 20);
-            this.txtbox_incometaxcontribution.TabIndex = 63;
+            this.btn_save.Location = new System.Drawing.Point(636, 368);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(54, 22);
+            this.btn_save.TabIndex = 74;
+            this.btn_save.Text = "SAVE";
+            this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
-            // txtbox_sssloans
+            // btn_netincome
             // 
-            this.txtbox_sssloans.Location = new System.Drawing.Point(604, 153);
-            this.txtbox_sssloans.Name = "txtbox_sssloans";
-            this.txtbox_sssloans.Size = new System.Drawing.Size(147, 20);
-            this.txtbox_sssloans.TabIndex = 64;
+            this.btn_netincome.Location = new System.Drawing.Point(543, 368);
+            this.btn_netincome.Name = "btn_netincome";
+            this.btn_netincome.Size = new System.Drawing.Size(89, 22);
+            this.btn_netincome.TabIndex = 73;
+            this.btn_netincome.Text = "NET INCOME";
+            this.btn_netincome.UseVisualStyleBackColor = true;
+            this.btn_netincome.Click += new System.EventHandler(this.btn_netincome_Click);
             // 
-            // txtbox_pagibigloan
+            // btn_grossincome
             // 
-            this.txtbox_pagibigloan.Location = new System.Drawing.Point(604, 179);
-            this.txtbox_pagibigloan.Name = "txtbox_pagibigloan";
-            this.txtbox_pagibigloan.Size = new System.Drawing.Size(147, 20);
-            this.txtbox_pagibigloan.TabIndex = 65;
+            this.btn_grossincome.Location = new System.Drawing.Point(437, 367);
+            this.btn_grossincome.Name = "btn_grossincome";
+            this.btn_grossincome.Size = new System.Drawing.Size(102, 24);
+            this.btn_grossincome.TabIndex = 72;
+            this.btn_grossincome.Text = "GROSS INCOME";
+            this.btn_grossincome.UseVisualStyleBackColor = true;
+            this.btn_grossincome.Click += new System.EventHandler(this.btn_grossincome_Click);
             // 
-            // txtbox_facultysavingsdeposit
+            // label41
             // 
-            this.txtbox_facultysavingsdeposit.Location = new System.Drawing.Point(604, 205);
-            this.txtbox_facultysavingsdeposit.Name = "txtbox_facultysavingsdeposit";
-            this.txtbox_facultysavingsdeposit.Size = new System.Drawing.Size(147, 20);
-            this.txtbox_facultysavingsdeposit.TabIndex = 66;
-            // 
-            // txtbox_facultysavingsloan
-            // 
-            this.txtbox_facultysavingsloan.Location = new System.Drawing.Point(604, 231);
-            this.txtbox_facultysavingsloan.Name = "txtbox_facultysavingsloan";
-            this.txtbox_facultysavingsloan.Size = new System.Drawing.Size(147, 20);
-            this.txtbox_facultysavingsloan.TabIndex = 67;
-            // 
-            // txtbox_salaryloan
-            // 
-            this.txtbox_salaryloan.Location = new System.Drawing.Point(604, 257);
-            this.txtbox_salaryloan.Name = "txtbox_salaryloan";
-            this.txtbox_salaryloan.Size = new System.Drawing.Size(147, 20);
-            this.txtbox_salaryloan.TabIndex = 68;
-            // 
-            // txtbox_otherloans
-            // 
-            this.txtbox_otherloans.Location = new System.Drawing.Point(604, 283);
-            this.txtbox_otherloans.Name = "txtbox_otherloans";
-            this.txtbox_otherloans.Size = new System.Drawing.Size(147, 20);
-            this.txtbox_otherloans.TabIndex = 69;
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(449, 336);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(91, 13);
+            this.label41.TabIndex = 71;
+            this.label41.Text = "Total Deductions:";
             // 
             // label40
             // 
@@ -803,65 +802,81 @@
             this.label40.TabIndex = 70;
             this.label40.Text = "DEDUCTIONS SUMMARY:";
             // 
-            // label41
+            // txtbox_otherloans
             // 
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(449, 336);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(91, 13);
-            this.label41.TabIndex = 71;
-            this.label41.Text = "Total Deductions:";
+            this.txtbox_otherloans.Location = new System.Drawing.Point(604, 283);
+            this.txtbox_otherloans.Name = "txtbox_otherloans";
+            this.txtbox_otherloans.Size = new System.Drawing.Size(147, 20);
+            this.txtbox_otherloans.TabIndex = 69;
             // 
-            // btn_grossincome
+            // txtbox_salaryloan
             // 
-            this.btn_grossincome.Location = new System.Drawing.Point(437, 367);
-            this.btn_grossincome.Name = "btn_grossincome";
-            this.btn_grossincome.Size = new System.Drawing.Size(102, 24);
-            this.btn_grossincome.TabIndex = 72;
-            this.btn_grossincome.Text = "GROSS INCOME";
-            this.btn_grossincome.UseVisualStyleBackColor = true;
+            this.txtbox_salaryloan.Location = new System.Drawing.Point(604, 257);
+            this.txtbox_salaryloan.Name = "txtbox_salaryloan";
+            this.txtbox_salaryloan.Size = new System.Drawing.Size(147, 20);
+            this.txtbox_salaryloan.TabIndex = 68;
             // 
-            // button2
+            // txtbox_facultysavingsloan
             // 
-            this.button2.Location = new System.Drawing.Point(543, 368);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(89, 22);
-            this.button2.TabIndex = 73;
-            this.button2.Text = "NET INCOME";
-            this.button2.UseVisualStyleBackColor = true;
+            this.txtbox_facultysavingsloan.Location = new System.Drawing.Point(604, 231);
+            this.txtbox_facultysavingsloan.Name = "txtbox_facultysavingsloan";
+            this.txtbox_facultysavingsloan.Size = new System.Drawing.Size(147, 20);
+            this.txtbox_facultysavingsloan.TabIndex = 67;
             // 
-            // button3
+            // txtbox_facultysavingsdeposit
             // 
-            this.button3.Location = new System.Drawing.Point(636, 368);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(54, 22);
-            this.button3.TabIndex = 74;
-            this.button3.Text = "SAVE";
-            this.button3.UseVisualStyleBackColor = true;
+            this.txtbox_facultysavingsdeposit.Location = new System.Drawing.Point(604, 205);
+            this.txtbox_facultysavingsdeposit.Name = "txtbox_facultysavingsdeposit";
+            this.txtbox_facultysavingsdeposit.Size = new System.Drawing.Size(147, 20);
+            this.txtbox_facultysavingsdeposit.TabIndex = 66;
             // 
-            // button4
+            // txtbox_pagibigloan
             // 
-            this.button4.Location = new System.Drawing.Point(694, 367);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(62, 22);
-            this.button4.TabIndex = 75;
-            this.button4.Text = "UPDATE";
-            this.button4.UseVisualStyleBackColor = true;
+            this.txtbox_pagibigloan.Location = new System.Drawing.Point(604, 179);
+            this.txtbox_pagibigloan.Name = "txtbox_pagibigloan";
+            this.txtbox_pagibigloan.Size = new System.Drawing.Size(147, 20);
+            this.txtbox_pagibigloan.TabIndex = 65;
             // 
-            // button5
+            // txtbox_sssloans
             // 
-            this.button5.Location = new System.Drawing.Point(760, 367);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(62, 22);
-            this.button5.TabIndex = 76;
-            this.button5.Text = "NEW";
-            this.button5.UseVisualStyleBackColor = true;
+            this.txtbox_sssloans.Location = new System.Drawing.Point(604, 153);
+            this.txtbox_sssloans.Name = "txtbox_sssloans";
+            this.txtbox_sssloans.Size = new System.Drawing.Size(147, 20);
+            this.txtbox_sssloans.TabIndex = 64;
+            // 
+            // txtbox_incometaxcontribution
+            // 
+            this.txtbox_incometaxcontribution.Location = new System.Drawing.Point(604, 111);
+            this.txtbox_incometaxcontribution.Name = "txtbox_incometaxcontribution";
+            this.txtbox_incometaxcontribution.Size = new System.Drawing.Size(147, 20);
+            this.txtbox_incometaxcontribution.TabIndex = 63;
+            // 
+            // txtbox_pagibigcontribution
+            // 
+            this.txtbox_pagibigcontribution.Location = new System.Drawing.Point(604, 86);
+            this.txtbox_pagibigcontribution.Name = "txtbox_pagibigcontribution";
+            this.txtbox_pagibigcontribution.Size = new System.Drawing.Size(147, 20);
+            this.txtbox_pagibigcontribution.TabIndex = 62;
+            // 
+            // txtbox_philhealthcontribution
+            // 
+            this.txtbox_philhealthcontribution.Location = new System.Drawing.Point(604, 61);
+            this.txtbox_philhealthcontribution.Name = "txtbox_philhealthcontribution";
+            this.txtbox_philhealthcontribution.Size = new System.Drawing.Size(147, 20);
+            this.txtbox_philhealthcontribution.TabIndex = 61;
+            // 
+            // txtbox_ssscontribution
+            // 
+            this.txtbox_ssscontribution.Location = new System.Drawing.Point(604, 37);
+            this.txtbox_ssscontribution.Name = "txtbox_ssscontribution";
+            this.txtbox_ssscontribution.Size = new System.Drawing.Size(147, 20);
+            this.txtbox_ssscontribution.TabIndex = 49;
             // 
             // LESSON5ACTIVITY
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(862, 664);
+            this.ClientSize = new System.Drawing.Size(876, 682);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -888,7 +903,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtbox_Employeenumber;
+        private System.Windows.Forms.TextBox txtbox_employeenumber;
         private System.Windows.Forms.TextBox txtbox_department;
         private System.Windows.Forms.TextBox txtbox_basicincomerateperhour;
         private System.Windows.Forms.TextBox txtbox_basicincomenumberofhours;
@@ -926,7 +941,6 @@
         private System.Windows.Forms.TextBox txtbox_surname;
         private System.Windows.Forms.TextBox txtbox_civilstatus;
         private System.Windows.Forms.TextBox txtbox_qualifieddependentstatus;
-        private System.Windows.Forms.TextBox txtbox_paydate;
         private System.Windows.Forms.TextBox txtbox_employeestatus;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
@@ -954,11 +968,13 @@
         private System.Windows.Forms.TextBox txtbox_pagibigcontribution;
         private System.Windows.Forms.TextBox txtbox_philhealthcontribution;
         private System.Windows.Forms.TextBox txtbox_ssscontribution;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_new;
+        private System.Windows.Forms.Button btn_update;
+        private System.Windows.Forms.Button btn_save;
+        private System.Windows.Forms.Button btn_netincome;
         private System.Windows.Forms.Button btn_grossincome;
         private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.TextBox txtbox_totaldeductions;
+        private System.Windows.Forms.DateTimePicker datetimepickerpaydate;
     }
 }
